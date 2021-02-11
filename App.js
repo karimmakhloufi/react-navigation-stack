@@ -7,6 +7,56 @@ export default function App() {
     <View style={{ backgroundColor: "red" }}>
       <Text>No style</Text>
       <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
+      <Text>No style</Text>
     </View>
   );
 }
