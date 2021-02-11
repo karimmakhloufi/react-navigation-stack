@@ -12,10 +12,13 @@ import {
 export default function App() {
   const [inputValue, setInputValue] = useState("defaultValue");
   return (
-    <ScrollView>
+    <ScrollView style={{ paddingTop: 50 }}>
       <View style={{ backgroundColor: "lightgrey" }}>
-        <TextInput value={inputValue}></TextInput>
-        <Button title="Push me"></Button>
+        <TextInput
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+        ></TextInput>
+        <Button title="Push me" onPress={() => alert(inputValue)}></Button>
       </View>
     </ScrollView>
   );
