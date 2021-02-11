@@ -4,7 +4,8 @@ import { StyleSheet, Text, View } from "react-native";
 
 export default function App() {
   return (
-    <View>
+    <View style={{ backgroundColor: "red" }}>
+      <Text>No style</Text>
       <Text>No style</Text>
     </View>
   );
