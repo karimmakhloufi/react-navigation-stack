@@ -23,18 +23,15 @@ export default function App() {
     })();
   }, []);
   return (
-    <ScrollView style={{ paddingTop: 50 }}>
-      {users
-        ? users.map((el, index) => (
-            <View key={index}>
-              <Text>{el.email}</Text>
-              <Image
-                style={{ width: 400, height: 400 }}
-                source={{ uri: el.download_url }}
-              />
-            </View>
-          ))
-        : null}
-    </ScrollView>
+    <FlatList
+      data={users}
+      renderItem={({ item }) => (
+        <Image
+          style={{ width: 400, height: 400 }}
+          source={{ uri: item.download_url }}
+        />
+      )}
+      style={{ paddingTop: 50 }}
+    />
   );
 }
