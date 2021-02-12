@@ -8,6 +8,7 @@ import {
   TextInput,
   Button,
   Image,
+  FlatList,
 } from "react-native";
 
 import axios from "axios";
@@ -17,19 +18,19 @@ export default function App() {
   const [users, setUsers] = useState([]);
   useEffect(() => {
     (async () => {
-      const result = await axios("https://randomuser.me/api/?results=50");
-      setUsers(result.data.results);
+      const result = await axios("https://picsum.photos/v2/list");
+      setUsers(result.data);
     })();
   }, []);
   return (
     <ScrollView style={{ paddingTop: 50 }}>
-      {users.length > 0
+      {users
         ? users.map((el, index) => (
             <View key={index}>
               <Text>{el.email}</Text>
               <Image
-                style={{ width: 100, height: 100 }}
-                source={{ uri: el.picture.large }}
+                style={{ width: 400, height: 400 }}
+                source={{ uri: el.download_url }}
               />
             </View>
           ))
