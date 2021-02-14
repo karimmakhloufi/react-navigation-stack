@@ -1,37 +1,12 @@
-import { StatusBar } from "expo-status-bar";
+import "react-native-gesture-handler";
 import React, { useState, useEffect } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  ScrollView,
-  TextInput,
-  Button,
-  Image,
-  FlatList,
-} from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 
-import axios from "axios";
+import PicsumImageViewerComponent from "./Components/PicsumViewerComponent";
+
+const Stack = createStackNavigator();
 
 export default function App() {
-  const [inputValue, setInputValue] = useState("defaultValue");
-  const [users, setUsers] = useState([]);
-  useEffect(() => {
-    (async () => {
-      const result = await axios("https://picsum.photos/v2/list");
-      setUsers(result.data);
-    })();
-  }, []);
-  return (
-    <FlatList
-      data={users}
-      renderItem={({ item }) => (
-        <Image
-          style={{ width: 400, height: 400 }}
-          source={{ uri: item.download_url }}
-        />
-      )}
-      style={{ paddingTop: 50 }}
-    />
-  );
+  return <PicsumImageViewerComponent />;
 }
