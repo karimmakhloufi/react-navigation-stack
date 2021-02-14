@@ -12,7 +12,7 @@ import {
 
 import axios from "axios";
 
-const PicsumImageViewerComponent = () => {
+const PicsumImageViewerComponent = ({ navigation }) => {
   const [inputValue, setInputValue] = useState("defaultValue");
   const [users, setUsers] = useState([]);
   useEffect(() => {
@@ -22,16 +22,24 @@ const PicsumImageViewerComponent = () => {
     })();
   }, []);
   return (
-    <FlatList
-      data={users}
-      renderItem={({ item }) => (
-        <Image
-          style={{ width: 400, height: 400 }}
-          source={{ uri: item.download_url }}
-        />
-      )}
-      style={{ paddingTop: 50 }}
-    />
+    <>
+      <Button
+        title="Go To About"
+        onPress={() => {
+          navigation.push("About");
+        }}
+      />
+      <FlatList
+        data={users}
+        renderItem={({ item }) => (
+          <Image
+            style={{ width: 400, height: 400 }}
+            source={{ uri: item.download_url }}
+          />
+        )}
+        style={{ paddingTop: 50 }}
+      />
+    </>
   );
 };
 
